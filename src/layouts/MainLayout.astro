@@ -17,8 +17,21 @@ const { title, ...props } = Astro.props
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 	</head>
 	<body>
-		<main class={props.class || ""}>
+		<main class:list={["font-montserrat", props.class || ""]}>
             <slot />
         </main>
 	</body>
 </html>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700&family=Montserrat:wght@100..900&display=swap');
+	
+	.font-montserrat {
+		font-family: 'Montserrat', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	}
+	
+	.font-montserrat-alternates {
+		font-family: 'Montserrat Alternates', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+	}
+
+</style>
