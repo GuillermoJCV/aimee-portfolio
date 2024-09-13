@@ -1,11 +1,20 @@
 ---
+import ImageScroller from "../components/ImageScroller.astro";
+import PersonalInfoSection from "../components/PersonalInfoSection.astro";
+import Presentation from "../components/Presentation.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
 
 ---
 
-<MainLayout title="Aimee Portfolio" >
+<MainLayout title="Aimee Portfolio" class="flex flex-col gap-16 items-center p-8">
     
+    <Presentation   name="Casandra Aimee" 
+                    email="aimee@gmail.com" 
+                    proficiency="Artista Digital"/>
 
-    
+    <PersonalInfoSection />
+
+    <ImageScroller />
+
 </MainLayout>
