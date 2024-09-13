@@ -1,0 +1,15 @@
+---
+import StrawBerry from "../../assets/Strawberries/Fresa1.png"
+
+interface Props {
+    class? : string;
+}
+
+const {...props} = Astro.props
+
+---
+
+<img    class:list={["", props.class || ""]}
+        src={StrawBerry.src}
+        alt="Strawberry"/>
+
