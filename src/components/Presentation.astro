@@ -1,9 +1,18 @@
 ---
+interface Props {
+    name : string;
+    email : string;
+    proficiency : string;
+    class? : string;
+}
 
+const { name, email, proficiency, ...props} = Astro.props
 
 ---
 
-<figure>
+<figure class:list={["flex flex-col items-center gap-2 font-montserrat-alternates", props.class]}>
     <div class="bg-strawberry-500 w-32 h-32 rounded-full"></div>
-
+    <h1 class="text-xl">{name}</h1>
+    <p class="font-semibold">{proficiency}</p>
+    <p>{email}</p>
 </figure>
