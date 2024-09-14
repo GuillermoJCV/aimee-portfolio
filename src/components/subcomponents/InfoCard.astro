@@ -11,7 +11,7 @@ const { title, ...props } = Astro.props
     <h2 class="text-center font-semibold font-montserrat-alternates">
         {title}
     </h2>
-    <ul class="flex justify-around items-center h-full">
+    <ul class="flex flex-col sm:flex-row justify-around items-center h-full">
         <slot />
     </ul>
 </article>
