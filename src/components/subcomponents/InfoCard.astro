@@ -1,0 +1,17 @@
+---
+interface Props {
+    title : string;
+    class? : string;
+}
+const { title, ...props } = Astro.props
+
+---
+
+<article class:list={["flex flex-col w-full", props.class || ""]}>
+    <h2 class="text-center font-semibold font-montserrat-alternates">
+        {title}
+    </h2>
+    <ul class="flex justify-around items-center h-full">
+        <slot />
+    </ul>
+</article>
