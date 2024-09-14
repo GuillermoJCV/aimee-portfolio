@@ -1,4 +1,7 @@
 ---
+import StrawberryFirst from './Strawberries/StrawberryFirst.astro';
+import StrawberrySecond from './Strawberries/StrawberrySecond.astro';
+import StrawberryThird from './Strawberries/StrawberryThird.astro';
 import InfoCard from './subcomponents/InfoCard.astro';
 
 interface Props {
@@ -8,7 +11,11 @@ const { ...props } = Astro.props
 
 ---
 
-<div class:list={["bg-lightpink-50/50 list-none w-full", props.class]}>
+<div class:list={["flex flex-col gap-8 w-full p-4 relative font-montserrat-alternates", props.class]}>
+    <StrawberryFirst class="top-0 left-0 -z-10 scale-75"/>
+    <StrawberrySecond class="top-0 right-0 -z-10 scale-75"/>
+    <StrawberryThird class="-bottom-16 right-1/4 -z-10 scale-75"/>
+    <div class="size-full top-0 left-0 bg-lightpink-50/50 backdrop-blur-sm -z-10 absolute"></div>
     <section class="flex w-full">
         <InfoCard title="Habilidades">
             <li>Dibujo Tradicional</li>
@@ -38,3 +45,9 @@ const { ...props } = Astro.props
         </InfoCard>
     </section>
 </div>
+
+<style>
+    li {
+        line-height: 2.25rem;
+    }
+</style>
