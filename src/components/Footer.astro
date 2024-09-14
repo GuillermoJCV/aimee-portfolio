@@ -1,0 +1,12 @@
+---
+interface Props {
+    class? : string
+}
+
+const { ...props } = Astro.props
+
+---
+
+<footer class:list={["w-full h-32 bg-strawberry-400 bottom-0 rounded-t-3xl absolute", props.class]}>
+
+</footer>
