@@ -1,8 +1,8 @@
 ---
 import ScrolleableImg from './subcomponents/ScrolleableImg.astro'
 import ScrollerSection from './subcomponents/ScrollerSection.astro'
-// import Example from "../assets/example.png"
-// import Example2 from "../assets/example2.jpg"
+import Example from "../assets/example.jpg"
+import Example2 from "../assets/example2.png"
 
 interface Props {
     class? : string
@@ -15,10 +15,10 @@ const { ...props } = Astro.props
 <div class:list={["flex w-full h-screen py-2", props.class]}>
     <ScrollerSection>
         {
-        // <ScrolleableImg image={Example} alt="Example"/>
-        // <ScrolleableImg image={Example2} alt="Example"/>
-        // <ScrolleableImg image={Example} alt="Example"/>
-        // <ScrolleableImg image={Example2} alt="Example"/>
+        <ScrolleableImg image={Example} alt="Example"/>
+        <ScrolleableImg image={Example2} alt="Example"/>
+        <ScrolleableImg image={Example} alt="Example"/>
+        <ScrolleableImg image={Example2} alt="Example"/>
         }
     </ScrollerSection>
 </div>
