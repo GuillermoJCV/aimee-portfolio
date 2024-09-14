@@ -11,8 +11,9 @@ const { image, alt } = Astro.props
 
 ---
 
-<figure class="snap-always snap-center shrink-0">
+<figure class="flex justify-center bg-lightpink-200 snap-always snap-center shrink-0 w-full">
     <Image  class="shrink-0 h-full object-contain bg-lightpink-200"
-            src={image} 
-            alt={alt}/>
+            src={image}
+            alt={alt}
+    />
 </figure>
