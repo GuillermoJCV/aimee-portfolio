@@ -1,5 +1,6 @@
 ---
 import Circle from '../components/Backgrounds/Circle.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
     title : string;
@@ -26,6 +27,7 @@ const { title, ...props } = Astro.props
 		<main class:list={["font-montserrat", props.class || ""]}>
             <slot />
         </main>
+		<Footer />
 	</body>
 </html>
 

@@ -1,5 +1,4 @@
 ---
-import Footer from "../components/Footer.astro";
 import ImageScroller from "../components/ImageScroller.astro";
 import PersonalInfoSection from "../components/PersonalInfoSection.astro";
 import Presentation from "../components/Presentation.astro";
@@ -8,7 +7,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 ---
 
-<MainLayout title="Aimee Portfolio" class="flex flex-col gap-16 items-center p-8 text-strawberry-950">
+<MainLayout title="Aimee Portfolio" class="flex flex-col gap-16 p-4 items-center text-strawberry-950">
 
     <Presentation   name="Casandra Aimee" 
                     email="aimee@gmail.com" 
@@ -19,7 +18,5 @@ import MainLayout from "../layouts/MainLayout.astro";
     {
     <ImageScroller />
     }
-
-    <Footer />
 
 </MainLayout>
