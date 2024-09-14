@@ -1,0 +1,39 @@
+---
+interface Props {
+    class? : string;
+}
+const { ...props } = Astro.props
+
+---
+
+<div class:list={["bg-lightpink-50/50 list-none w-full", props.class]}>
+    <section class="flex w-full">
+        <article class="flex flex-col w-full">
+            <h2 class="text-center font-semibold font-montserrat-alternates">
+                Habilidades
+            </h2>
+            <ul class="flex justify-around items-center h-full">
+                <li>Dibujo Tradicional</li>
+                <li>Dibujo Digital</li>
+            </ul>
+        </article>
+        <article class="flex flex-col w-full">
+            <h2 class="text-center font-semibold font-montserrat-alternates">
+                Tecnologías
+            </h2>
+            <ul class="flex justify-around items-center h-full">
+                <li class="text-center">
+                    <p>Ibis Paint</p>
+                    <p>Power Point</p>
+                </li>
+                <li class="text-center">
+                    <p>Notion</p>
+                    <p>Microsoft Word</p>
+                </li>
+            </ul>
+        </article>
+    </section>
+    <section>
+        
+    </section>
+</div>
