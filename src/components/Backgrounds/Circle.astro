@@ -1,0 +1,10 @@
+---
+interface Props {
+    class? : string
+}
+
+const { ...props } = Astro.props
+
+---
+
+<div class:list={["size-64 rounded-full absolute aspect-square -z-10", props.class]}></div>
